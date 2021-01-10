@@ -1,5 +1,6 @@
 package BagsStacksQueues;
 
+//Always a debate: Use array or linklist
 public class StringStack {
     private Node first = null;
 
