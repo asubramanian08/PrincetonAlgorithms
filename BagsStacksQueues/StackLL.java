@@ -1,11 +1,11 @@
 package BagsStacksQueues;
 
 //Always a debate: Use array or linklist
-public class StringStack {
+public class StackLL<Item> {
     private Node first = null;
 
     private class Node {
-        String item;
+        Item item;
         Node next;
     }
 
@@ -13,15 +13,15 @@ public class StringStack {
         return first == null;
     }
 
-    public void push(String item) {
+    public void push(Item item) {
         Node oldfirst = first;
         first = new Node();
         first.item = item;
         first.next = oldfirst;
     }
 
-    public String pop() {
-        String item = first.item;
+    public Item pop() {
+        Item item = first.item;
         first = first.next;
         return item;
     }

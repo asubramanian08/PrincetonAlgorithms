@@ -3,6 +3,7 @@ package UnionFind; //not supposed to be here in submittion
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 
+//mine work
 public class PercolationStats {
 
     private static final double STD_MULT = 1.96;

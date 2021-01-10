@@ -2,6 +2,7 @@ package UnionFind; //not supposed to be here i submition
 
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
+//my work
 public class Percolation {
 
     private boolean[][] openGrid;
