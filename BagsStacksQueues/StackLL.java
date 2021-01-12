@@ -2,7 +2,7 @@ package BagsStacksQueues;
 
 import java.util.Iterator;
 
-//Always a debate: Use array or linklist
+//Can exemplify recursion
 public class StackLL<Item> {
     private Node first = null;
 
