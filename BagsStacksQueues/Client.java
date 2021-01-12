@@ -9,6 +9,10 @@ import edu.princeton.cs.algs4.StdOut;
 //Key: Client shoudn't notice difference between a 
 //linklist implementation or a array implementation
 
+//BAG: Put things in bag but don't take out
+//Same imp. as stack with no pop, or queue with no dequeue
+//Have Itterator *** nessisary
+
 class Client {
     public static void main(String[] args) {
         StackLL<String> stack = new StackLL<String>();
