@@ -1,5 +1,7 @@
 package BagsStacksQueues;
 
+import java.util.Iterator;
+
 public class QueueLL<Item> {
     private Node first, last;
 
@@ -29,5 +31,21 @@ public class QueueLL<Item> {
         if (isEmpty())
             last = null;
         return item;
+    }
+
+    public Iterator<Item> getIterator() {
+        return new iterator();
+    }
+
+    private class iterator implements Iterator<Item> {
+        private Node i = first;
+
+        public boolean hasNext() {
+            return i.next != null;
+        }
+
+        public Item next() {
+            return (i = i.next).item;
+        }
     }
 }
