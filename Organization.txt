@@ -1,0 +1,8 @@
+Every section gets its own folder regardless of week
+
+The *_PA folder is where MY code for the unit is
+The GeneralCode folder are where outline and generic code for that topic is (ex. client)
+The implementations folder is where different implementations of the topic is written
+The OtherCodes folder is where all specific examples of code is
+The interview file is where the interview questions for that week are
+ -> The A's are my answers

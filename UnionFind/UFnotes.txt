@@ -1,5 +1,0 @@
-Readings: 1.4 - Analysis of Algorithms, 1.5 - Case Study: Union-Find
-Connected is a equivalance statments.
-Percolation (can you for a path on a n x n grid where two white squares
-connect) uses union find -> very interesting pg 51 - end(pg 58 cool. Explained in detail
-here: https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php

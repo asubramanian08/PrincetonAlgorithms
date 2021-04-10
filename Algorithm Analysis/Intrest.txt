@@ -1,2 +1,0 @@
-A "log log plot" usaly makes programs liner. The 
-slope of it tell what order the function is running
