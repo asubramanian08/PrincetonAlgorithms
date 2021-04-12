@@ -1,0 +1,42 @@
+1. 
+Q:  Intersection of two sets. Given two arrays a[] and b[], each containing n distinct 2D points in the plane, 
+design a sub-quadratic algorithm to count the number of points that are contained both in array a[] and array b[]
+
+A:  Sort the arrays. Have two indexes in both a and b. If the point in a is greater than the point in b 
+increment b's index. If the point b is greater than the point in a increment a's index. If they are equal add 
+one to you similar count and increment both indexes.
+
+Hint:   shell-sort (or any other sub-quadratic sort)
+
+
+2.
+Q:  Permutation. Given two integer arrays of size n, design a sub-quadratic algorithm to determine whether one is 
+a permutation of the other. That is, do they contain exactly the same entries but, possibly, in a different 
+order.
+
+A:  Again, sort both arrays. Loop though the elements in the array which is supposed to be a permutation of the 
+other. Have an index into the other array. While the index info the non-permutation array is less than the the 
+current element increment the index. If the current element does not equal the non-permutation array's element 
+then its not a permutation. If you reach the end of the outer loop and it hasn't quit (or found a non equal 
+situation) then it is a permutation.
+
+Hint:    sort both arrays.
+
+
+3.
+Q:  Dutch national flag. Given an array of n buckets, each containing a red, white, or blue pebble, sort them by 
+color. The allowed operations are:
+ - swap(i,j):  swap the pebble in bucket i with the pebble in bucket j
+ - color(i): determine the color of the pebble in bucket i.
+The performance requirements are as follows:
+ - At most n calls to color().
+ - At most n calls to swap().
+ - Constant extra space
+
+A:  Loop though all the buckets and depending on its color increment red, white, or blue (n calls of color). 
+After that loop though the entire array and swap the first bucket containing red with the 0th position, the 
+second bucket containing red with the 1st position and so on until all red buckets have been swapped into place. 
+For the blue buckets loop though the non-red placed bucket and swap (so the first blue bucket you find will be 
+swapped at red ... ) After swiping for all blue buckets everything is in place.
+
+Hint:   3-way partitioning

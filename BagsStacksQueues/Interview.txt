@@ -14,7 +14,7 @@ String[] is a subtype of Object[], but Stack<String> is not a subtype of Stack<O
 Q:  Stack with max. Create a data structure that efficiently supports the stack operations (push and pop) and 
 also a return-the-maximum operation. Assume the elements are real numbers so that you can compare them.
 
-A: Have a linked list linking all elements in the stack by greatest order (separate from the main stack). When 
+A:  Have a linked list linking all elements in the stack by greatest order (separate from the main stack). When 
 you add an element find where is goes in the max linked list and add it. When you remove an element connect the 
 element below it with the one about it. The greatest element is the greatest thing element in the linked list.
 

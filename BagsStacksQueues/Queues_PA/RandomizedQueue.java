@@ -20,8 +20,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             for (int i = 0; i < arr.length; i++)
                 arr[i] = i;
             int randPos, temp;
-            for (int i = 0; i < arr.length; i++) {
-                randPos = StdRandom.uniform(arr.length);
+            for (int i = 1; i < arr.length; i++) {
+                randPos = StdRandom.uniform(i + 1);
                 temp = arr[i];
                 arr[i] = arr[randPos];
                 arr[randPos] = temp;
