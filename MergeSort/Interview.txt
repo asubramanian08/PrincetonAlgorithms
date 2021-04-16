@@ -1,0 +1,33 @@
+1.
+Q:  Merging with smaller auxiliary array. Suppose that the subarray a[0] to a[n−1] is sorted and the subarray 
+a[n] to a[2*n−1] is sorted. How can you merge the two sub-arrays so that a[0] to a[2∗n−1] is sorted using an 
+auxiliary array of length n (instead of 2n)?
+
+A:  Copy from a[0] to a[n-1] to the aux array. The new answer array will be a. The two indexes to have are the 
+one into the aux array and into the a[n] to a[2*n -1] sub array. Put the new values you get into a starting a 0. 
+The memory for the 2nd subset of the original a will never be over written because even if all element from your 
+aux array are added the extra space in the a array will alway exist. (The space needed frees when an entry from 
+the second subset is added).
+
+Hint:   copy only the left half into the auxiliary array.
+
+
+2.
+Q:  Counting inversions. An inversion in an array a[] is a pair of entries a[i] and a[j] such that i<j but 
+a[i]>a[j]. Given an array, design a linearithmic algorithm to count the number of inversions.
+
+A:  Note the position of each element. Sort the elements and note the change in the position that occurred if it 
+moved to a greater (by a higher index) position. Add all the changes and that is the number of inversions.
+
+Hint:   count while merge-sorting.
+
+
+3.
+Q:  Shuffling a linked list. Given a singly-linked list containing n items, rearrange the items uniformly at 
+random. Your algorithm should consume a logarithmic (or constant) amount of extra memory and run in time 
+proportional to n*log(n) in the worst case.
+
+A:  ?
+
+Hint:  design a linear-time subroutine that can take two uniformly shuffled linked lists of sizes n1 and n2 and 
+combined them into a uniformly shuffled linked lists of size n1 + n2.

@@ -17,4 +17,11 @@ public class SortOper {
                 return false;
         return true;
     }
+
+    public static boolean isSorted(Comparable[] a, int start, int end) {
+        for (int i = start + 1; i <= end; i++)
+            if (less(a[i], a[i - 1]))
+                return false;
+        return true;
+    }
 }
