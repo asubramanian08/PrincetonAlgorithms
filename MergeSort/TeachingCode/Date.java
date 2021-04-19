@@ -1,4 +1,4 @@
-package MergeSort.TeachingCode;
+package Mergesort.TeachingCode;
 
 //also in elementary sorts
 public class Date implements Comparable<Date> {

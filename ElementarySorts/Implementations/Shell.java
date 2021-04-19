@@ -1,5 +1,7 @@
 package ElementarySorts.Implementations;
 
+import util.SortOper;
+
 public class Shell {
     public static void sort(Comparable[] a) {
         int N = a.length;

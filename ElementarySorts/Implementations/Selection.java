@@ -1,5 +1,7 @@
 package ElementarySorts.Implementations;
 
+import util.SortOper;
+
 public class Selection {
     public static void sort(Comparable[] a) {
         int N = a.length;

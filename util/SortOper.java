@@ -1,7 +1,6 @@
-package MergeSort.Implementations;
+package util;
 
-//copied from Elementary sort implementations
-
+//code given from elementary sort, used in all sorts and others
 public class SortOper {
     public static boolean less(Comparable v, Comparable w) {
         return v.compareTo(w) < 0;

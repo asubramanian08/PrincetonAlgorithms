@@ -1,0 +1,46 @@
+1.
+Q:  Nuts and bolts. A disorganized carpenter has a mixed pile of n nuts and n bolts. The goal is to find the 
+corresponding pairs of nuts and bolts. Each nut fits exactly one bolt and each bolt fits exactly one nut. By 
+fitting a nut and a bolt together, the carpenter can see which one is bigger (but the carpenter cannot compare 
+two nuts or two bolts directly). Design an algorithm for the problem that uses at most proportional to n*log(n) 
+compares (probabilistically).
+
+A:  Sort the items by if they fit together. After that all the corresponding nuts and bolts are next to 
+each-other.
+
+Hint:   modify the quicksort partitioning part of quicksort. Remark: This research paper gives an algorithm that 
+runs in n*log4(n) time in the worst case. *This = http://www.cs.ucla.edu/~rafail/PUBLIC/17.pdf
+
+
+2.
+Q:  Selection in two sorted arrays. Given two sorted arrays a[] and b[], of lengths n1 and n2 and an integer 
+0≤k<n1+n2, design an algorithm to find a key of rank k. The order of growth of the worst case running time of 
+your algorithm should be log(n), where n=n1+n2.
+
+ - Version 1: n1=n2 (equal length arrays) and k=n/2 (median).
+ - Version 2: k=n/2 (median).
+ - Version 3: no restrictions.
+
+A:  (Solution for everything / V3 written) b-search the first array. To test the first array b-search the second 
+array and find where the element for the first array would lay. If the index of b + the index of a is greater 
+than k you know you went too far. Set the high for the a to the current a index. Set the high for the b to the 
+index in b. Do the opposite if it is less than k. Keep doing this until the index in a + index in b = k.
+
+Hint:   there are two basic approaches.
+Approach A: Compute the median in a[] and the median in b[]. Recur in a subproblem of roughly half the size.
+Approach B: Design a constant-time algorithm to determine whether a[i] is a key of rank k. Use this subroutine 
+and binary search.
+Dealing with corner cases can be tricky.
+
+
+3.
+Q:  Decimal dominants. Given an array with n keys, design an algorithm to find all values that occur more than 
+n/10 times. The expected running time of your algorithm should be linear.
+
+A:  When an array is partition it is dividend into 2 (or 3 depending on how you look at it) sections where 
+recurring keys have to be in the same division. Make it such that there are 10 such partition. Loop through the 
+entire array, if an element has n/10 or more occurrences it has to fill up a partition.
+
+Hint:   determine the (n/10)th
+  largest key using quick-select and check if it occurs more than n/10 times.
+Alternate solution hint: use 9 counters.

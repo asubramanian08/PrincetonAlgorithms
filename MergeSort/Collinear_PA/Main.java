@@ -1,4 +1,4 @@
-package MergeSort.Collinear_PA;
+package Mergesort.Collinear_PA;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;

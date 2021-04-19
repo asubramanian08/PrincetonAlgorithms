@@ -1,4 +1,4 @@
-package MergeSort.TeachingCode;
+package Mergesort.TeachingCode;
 
 import java.util.Comparator;
 

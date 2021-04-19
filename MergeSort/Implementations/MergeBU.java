@@ -1,4 +1,6 @@
-package MergeSort.Implementations;
+package Mergesort.Implementations;
+
+import util.SortOper;
 
 public class MergeBU {
     // copied from merge.java

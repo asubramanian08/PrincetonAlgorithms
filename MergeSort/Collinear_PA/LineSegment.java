@@ -1,4 +1,4 @@
-package MergeSort.Collinear_PA;
+package Mergesort.Collinear_PA;
 
 //they implement this entire thing
 public class LineSegment {

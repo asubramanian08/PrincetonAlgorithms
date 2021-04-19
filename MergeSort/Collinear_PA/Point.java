@@ -1,4 +1,4 @@
-package MergeSort.Collinear_PA;
+package Mergesort.Collinear_PA;
 
 import java.util.Comparator;
 import edu.princeton.cs.algs4.StdDraw;
