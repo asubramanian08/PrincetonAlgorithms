@@ -1,4 +1,4 @@
-package util;
+package Utility;
 
 //code given from elementary sort, used in all sorts and others
 public class SortOper {

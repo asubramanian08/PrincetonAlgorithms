@@ -1,7 +1,7 @@
 package Quicksort.Implementations;
 
+import Utility.SortOper;
 import edu.princeton.cs.algs4.StdRandom;
-import util.SortOper;
 
 public class Quick {
     private static int partition(Comparable[] a, int lo, int hi) {

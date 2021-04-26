@@ -1,6 +1,6 @@
 package Mergesort.Implementations;
 
-import util.SortOper;
+import Utility.SortOper;
 
 public class Merge {
     // could flip a and aux for more speed efficiency

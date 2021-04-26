@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solver",
+            "request": "launch",
+            "mainClass": "PriorityQueue.puzzle8_PA.Solver",
+            "projectName": "PrinctonCoursera_895b6f83"
+        },
+        {
+            "type": "java",
+            "name": "Launch Board",
+            "request": "launch",
+            "mainClass": "PriorityQueue.puzzle8_PA.Board",
+            "projectName": "PrinctonCoursera_895b6f83"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "MergeSort.Collinear_PA.Main",

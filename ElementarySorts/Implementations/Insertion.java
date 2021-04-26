@@ -1,7 +1,8 @@
 package ElementarySorts.Implementations;
 
 import java.lang.Comparable;
-import util.SortOper;
+
+import Utility.SortOper;
 
 public class Insertion {
 

@@ -1,6 +1,6 @@
 package ElementarySorts.Implementations;
 
-import util.SortOper;
+import Utility.SortOper;
 
 public class Selection {
     public static void sort(Comparable[] a) {
