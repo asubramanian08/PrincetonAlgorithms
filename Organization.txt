@@ -1,8 +1,0 @@
-Every section gets its own folder regardless of week
-
-The *_PA folder is where MY code for the unit is (might not be there) the assignment link will be there
-The implementations folder is where different implementations of the topic is written
-The TeachingCode folder is where all specific examples of code is and the client ...
-The interview file is where the interview questions for that week are
- -> The A's are my answers
-Every folder also contains the pdf that the course teaches off of.

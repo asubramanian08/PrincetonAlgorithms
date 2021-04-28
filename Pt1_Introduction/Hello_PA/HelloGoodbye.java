@@ -1,4 +1,4 @@
-package Intro.Hello_PA;
+package Pt1_Introduction.Hello_PA;
 
 import edu.princeton.cs.algs4.StdOut;
 
