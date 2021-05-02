@@ -1,9 +1,12 @@
 package BalancedSearchTrees.Implementations;
 
+//my BST (not self balancing)
+import ElementarySymbolTables.Implementations.BST;
+
 // I added to node constructor, put public method, and constructor
 // Didn't implement the rest of the BST methods needed -> look at BST.java
 //Didn't implement delete -> a little more complicated by still lg(n)
-public class RedBlackTree<Key extends Comparable<Key>, Value> {
+public class RedBlackTree<Key extends Comparable<Key>, Value> extends BST<Key, Value> {
     private Node root = null;
     private static final boolean RED = true;
     private static final boolean BLACK = false;

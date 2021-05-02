@@ -1,0 +1,4 @@
+2D trees: This is the same as a regular binary tree. The only difference is the level of a node determines 
+whether it is a horizontal or vertical line.
+KD trees: Similar to the 2D tree, a KD tree just operates in k dimensions. The dimension this is being used 
+is i mod k where i is the level of a node in the tree. -> look at my PA for my code
