@@ -1,0 +1,7 @@
+Java has its pre-made hash functions: pg 7 - 8
+String originally tried skipping every 8 -> didn't work out
+
+To properly scale down a number: return (key.hashCode() & 0x7fffffff) % Num;
+See page 12
+
+hashCode() returns a 32 bit int -> default is the memory location of the class
