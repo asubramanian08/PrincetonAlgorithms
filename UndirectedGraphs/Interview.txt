@@ -1,0 +1,40 @@
+1.
+Q.  Non-recursive depth-first search. Implement depth-first search in an undirected graph without using 
+recursion.
+
+A.  You can use a stack to implement this DFS. Instead of calling itself just add to the stack.  Loop and 
+take from the top of the stack until it is drained.
+
+Hint:   use an explicit stack, it is trickier than it may appear at first; you can simply replace a queue 
+with a stack in breadth-first search.
+
+
+2.
+Q.  Diameter and center of a tree. Given a connected graph with no cycles
+ - Diameter: design a linear-time algorithm to find the longest simple path in the graph.
+ - Center: design a linear-time algorithm to find a vertex such that its maximum distance from any other 
+vertex is minimized.
+
+A.  Do a DFS that returns the longest length of the current node to a leaf node. Also outside of the DFS 
+maintain a maximum distance variable inside it check that the sum of the 2 longest distances + 2 is greater 
+then the counter set the counter to that. If there is only one connection do the same but with 
+connection + 1.
+Find the maximum distance for every node to the farthest other node first use something similar to what is 
+described above. But there is not need to maintain a lasting maximum. After that for each child make there 
+maximum the max of the existing max and the current node max + 1 (as long as this max didn't come from that 
+child). Do a DSF after setting the child's new max into the child.
+
+Hint:   to compute the diameter, pick a vertex s; run BFS from s; then run BFS again from the vertex that is 
+furthest from s.
+consider vertices on the longest path.
+
+
+3.
+Q.  Euler cycle. An Euler cycle in a graph is a cycle (not necessarily simple) that uses every edge in the
+graph exactly one.
+ - Show that a connected graph has an Euler cycle if and only if every vertex has even degree.
+ - Design a linear-time algorithm to determine whether a graph has an Euler cycle, and if so, find one.
+
+A.  ?
+
+Hint:   use depth-first search and piece together the cycles you discover.
