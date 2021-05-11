@@ -1,0 +1,6 @@
+1d range search -> ordered and unordered array
+sweep line
+2d / kd trees alternate the line type
+    -> range search and nearest neighbor
+interval search
+break down pg 56

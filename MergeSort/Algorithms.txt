@@ -1,0 +1,8 @@
+mergesort 
+ - recursively combining
+ - complexity proof
+ - Cut off (for small arrays)
+ - bottom up
+ - making it generic
+Polar order compare
+Stable sort

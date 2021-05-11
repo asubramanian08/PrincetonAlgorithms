@@ -1,0 +1,7 @@
+DSU / union find -> connecting two things
+NOTE: many of the below are methods implementing Union find
+Quick find -> id's are the same
+Quick union -> Mark the parent and move up tree
+2 quick union improvements
+1.  Weighting -> Connect the trees baced on the size of the trees
+2.  Path compression -> when a path is found, shorten the distance.

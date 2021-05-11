@@ -1,0 +1,7 @@
+** Priority Queue
+PQ applications pg 5
+Binary heap -> data structure PQ uses (array representation)
+Heap sort -> sort like a priority queue
+Particle collision
+ - Balls moving (no bounce off each other)
+ - Event based simulation -> particle data type pg. 53-58

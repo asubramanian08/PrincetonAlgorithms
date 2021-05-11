@@ -1,0 +1,7 @@
+symbol table (API) -> like a map
+Many applications on pg 4
+Implementing an equal (using object)
+Frequency Counter
+Link-list implementation -> sequential search
+Binary search implementation -> array
+Binary search tree -> use key to determine placement

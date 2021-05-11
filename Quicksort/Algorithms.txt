@@ -1,0 +1,5 @@
+quicksort
+ - Shuffle (Knuth shuffle) before sort
+ - partition and sort 2 parts
+ - cutoff
+Break into 3 parts for duplicate keys

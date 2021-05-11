@@ -1,0 +1,7 @@
+Digraph -> connections are directed only from one point to another
+Many applications on pg. 11
+DSF -> Is connected, topological sort -> More complex things like 2-satisfiability, 
+directed Eular path, Strong Connectivity (connects both ways between 2 nodes)
+BFS -> shortest path
+ - Web crawler -> go thorough the link in a page
+Kosaraju-Sharir algorithm -> connected components

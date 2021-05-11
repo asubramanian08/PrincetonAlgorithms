@@ -1,0 +1,7 @@
+2-3 search (2 or 3 nodes on a tree to compare, send middle node up) -> BST base concept
+symbol table (key and value)
+ - sequential search
+ - Binary search
+ - BST
+    - red black (left leaning, instead of a 3 node)
+    - B-tree -> Tree with B compare points (accessing things is the costly thing)

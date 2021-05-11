@@ -1,0 +1,12 @@
+Applications:
+ - Sort strings/file alphabetical order
+Interfaces: comparable, compareTo / equalTo, less, exch
+isSorted
+Bubble sort (if smaller swap back)
+Selection Sort (swap the next min, with current element)
+Insertion (If next one is less, exchange)
+Shell sort (sort in increments)
+Shuffle sort (assign random numbers then sort them)
+Knuth shuffle (pick any number before or at you and swap)
+Convex Hull (Graham scan) + orientation
+Compare example -> data compare

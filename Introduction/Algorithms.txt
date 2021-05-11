@@ -1,0 +1,11 @@
+NOTE: This talks about all algorithms discussed
+
+Part 1:
+ - Data Types -> stack, queue, bag, union-find, priority queue
+ - sorting -> quicksort, mergesort, heapsort
+ - searching -> BST, red-black BST, hash table
+
+Part 2:
+ - Graphs -> BFS, DFS, Prim, Kruskal, Dijkstra
+ - Strings -> radix sorts, tries, KMP, regexps, data compression
+ - advanced -> B-tree, suffix array, max-flow

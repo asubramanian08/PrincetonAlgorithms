@@ -1,0 +1,7 @@
+NOTE: this is symbol table applications
+Sets -> applications pg 5
+Whitelist / black list
+Dictionary
+File searches / spotlight
+Concordance -> word occurrences with context
+Sparse Vector

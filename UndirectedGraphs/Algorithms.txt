@@ -1,0 +1,13 @@
+Undirected Graph (connection are both ways) -> adjacency representation
+Many applications pg 11
+Processing problems pg 13
+Degree and loops of a graph
+DFS (has many concepts below)
+Paths (like clusters of things that are all connected)
+Flood-fill
+BFS (concepts below)
+Paths (with BFS instead)
+Bacon numbers (closets for a node)
+Connected components (node v and w connected) -> DFS
+Other Topics: Bipartite, cycle detection, Eulerian tour, Hamiltonian path, Identical graphs, layout with 
+crossing edges

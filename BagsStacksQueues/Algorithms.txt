@@ -1,0 +1,5 @@
+Queues and Stacks (Linked List and Array implementations)
+How to resize arrays (double when full, half when 1/4 full)
+Bag (Stack or Queue without a way to remove)
+(Iterators and Generics->templates)
+Expression evaluator

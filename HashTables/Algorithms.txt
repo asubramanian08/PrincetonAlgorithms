@@ -1,0 +1,5 @@
+Hashing / Hash code of stuff (see JavaHashFunctions.txt)
+     -> goal: uniformly random
+Chaining (add collision to a linked list)
+Linear probing (keep searching until another is found)
+See some advancements pg 41 - 42
