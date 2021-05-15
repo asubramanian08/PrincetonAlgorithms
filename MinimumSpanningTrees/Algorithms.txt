@@ -1,0 +1,11 @@
+MST (covers all the nodes with minimal edge usage)
+ - Kruskal (add smallest until it creates a cycle) + union find for cycles
+ - Prim -> develope an lasting connected tree and add the shortest connection
+to a non tree component (lazy and eager) + priority queue (changing key for eager)
+ - Borůvka (not heavenly discussed in the lecture)
+Many applications pg 11
+Greedy algorithm -> the cut property of MST pg 16
+Weighted edge class -> class that MST could use
+Edge weighted graph (uses weighted edge)
+Priority queue with key changing -> for prim eager algo.
+MST search for best algo. list pg 63 (after that is other context)
