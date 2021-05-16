@@ -1,0 +1,16 @@
+General: shortest path (directed graphs)
+Directed Edge (from and to edge methods)
+Edge weighted digraph -> uses the directed edge
+    -> this is what all the shorted path algo.s use
+Notice: -> the shortest path with be a tree
+Move up to tree to determine the path
+Edge relaxing -> find a better path
+Optimality condition (is the SP correct) pg 21
+Note these algo.s are a lot like the spanning tree algo.s
+Algorithms:
+    Dijkstra (nonnegative weights) -> priority queue of edges | lot like prim algo
+    Topological sort (no directed cycles) -> relax all edges in topological order
+        -> picture shrinking, longest path -> job order (some have to be done before others)
+    Bellman-Ford (no negative cycles) 
+        -> loop though all edges and relax them until no improvements
+        -> negative cycles check -> currency gaining money -> take the negative log

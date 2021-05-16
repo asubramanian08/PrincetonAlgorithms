@@ -1,0 +1,37 @@
+1.
+Q:  Monotonic shortest path. Given an edge-weighted digraph G, design an E*log(E) algorithm to find a 
+monotonic shortest path from s to every other vertex. A path is monotonic if the sequence of edge weights 
+along the path are either strictly increasing or strictly decreasing.
+
+A:  run 2 instances of the following shortest path one from getting smaller and one for getting larger. Run 
+dijkstra's but instead of going from a node to a path go from a path to a path (think of it like that). Then 
+store the shortest pathos a node inside. Only add the edges in the priority queue if they are greater (or 
+less than depending on the run) than the current edge.
+
+Hint:   relax edges in ascending order to find a best monotonically increasing path; relax edges in 
+descending order to find a best monotonically decreasing path.
+
+
+2.
+Q:  Second shortest path. Given an edge-weighted digraph and let P be a shortest path from vertex s to vertex 
+t. Design an E*log(V) algorithm to find a path (not necessarily simple) other than P from s to t that is as 
+short as possible. Assume all of the edge weights are strictly positive.
+
+A:  Run dijkstra's except once t is reached continue. The second time t is hit is the path to use.
+
+Hint:   compute the shortest path distances from s to every vertex and the shortest path distances from every 
+vertex to t.
+
+
+3.
+Q:  Shortest path with one skippable edge. Given an edge-weighted digraph, design an E*log(V) algorithm to 
+find a shortest path from s to t where you can change the weight of any one edge to zero. Assume the edge 
+weights are nonnegative.
+
+A:  Have 2 priority queues one that has the weights before an edge removal, and one after. On an edge loop 
+the the children and add into the after pq the current weight (the the node being a child node) then also add 
+the to before pq the would be weight. finish the first pq, then move to the second. The answer is after t has 
+been marked in the after pq.
+
+Hint:   compute the shortest path from s to every vertex; compute the shortest path from every vertex to t; 
+combine.
