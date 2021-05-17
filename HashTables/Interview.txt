@@ -2,12 +2,9 @@
 Q.  4-SUM. Given an array a[] of n integers, the 4-SUM problem is to determine if there exist distinct 
 indices i, j, k, and l such that a[i]+a[j]=a[k]+a[l]. Design an algorithm for the 4-SUM problem that takes 
 time proportional to n^2 (under suitable technical assumptions).
-
 A.  Use some form of hashing were: the key is the sum if a[I] and a[j], and the value is some class 
 containing I and j.
-
 Hint:   create a hash table with nC2 key-value pairs.
-
 
 2.
 Q.  Hashing with wrong hashCode() or equals(). Suppose that you implement a data type OlympicAthlete for use 
@@ -16,12 +13,10 @@ in a java.util.HashMap.
  - Describe what happens if you override equals() but not hashCode().
  - Describe what happens if you override hashCode() but implement public boolean equals(OlympicAthlete that) 
 instead of public boolean equals(Object that).
-
 A.  Answers are divided by the question order
  - hash map will always say that a searched for object is not there (unless it is the same pointer)
  - the hash map will not start looking in the right place (unless it is the same pointer) and will most 
 likely not find the object
  - the hash map will not be able to use the function that the user implemented. It would have the same effect 
 as the first case
-
 Hint:   it's code—try it and see!

@@ -1,15 +1,12 @@
 1.
 Q:  3-SUM in quadratic time. Design an algorithm for the 3-SUM problem that takes time proportional to n^2 in the 
 worst case. You may assume that you can sort the n integers in time proportional to n^2 or better.
-
-A: First sort the 3-SUM. Loop through the every number. For every iteration have two pointers. One to the number 
+A:  First sort the 3-SUM. Loop through the every number. For every iteration have two pointers. One to the number 
 after 'I' (iterator) and one for the number after that. those three pointers will act like the three numbers 
 being used. iterate the third number to the end. If the sum of all three numbers is less then or equal 0 keep 
 iterating the 2nd. number. if all three numbers sum to 0 add one to the total count.
-
-Hint: given an integer x and a sorted array a[] of n distinct integers, design a linear-time algorithm to 
+Hint:   given an integer x and a sorted array a[] of n distinct integers, design a linear-time algorithm to 
 determine if there exists two distinct indices i and j such that a[i]+a[j]==x.
-
 
 2.
 Q:  Search in a bitonic array. An array is bitonic if it is comprised of an increasing sequence of integers 
@@ -18,11 +15,9 @@ distinct integer values, determines whether a given integer is in the array.
  - Standard version: Use ∼3lgn compares in the worst case.
  - Signing bonus: Use ∼2lgn compares in the worst case (and prove that no algorithm can guarantee to perform 
 fewer than ∼2lgn compares in the worst case).
-
-A: Binary search for the point where the array start decreasing. Binary search on both side of this point for the 
+A:  Binary search for the point where the array start decreasing. Binary search on both side of this point for the 
 integer being search for.
-
-Hints: Standard version. First, find the maximum integer using ∼1lgn compares—this divides the array into the 
+Hints:  Standard version. First, find the maximum integer using ∼1lgn compares—this divides the array into the 
 increasing and decreasing pieces.
 Signing bonus. Do it without finding the maximum integer.
 
@@ -35,10 +30,8 @@ determine the value of T given the following limitations on the number of eggs a
  - Version 2: ∼lgT eggs and ∼2lgT tosses.
  - Version 3: 2 eggs and ∼2 root n tosses.
  - Version 4: 2 eggs and ≤c root T tosses for some fixed constant c.
-
-A: Use a binary search where you set high to mid when egg at height mid cracks and low to mid otherwise.
-
-Hints: 
+A:  Use a binary search where you set high to mid when egg at height mid cracks and low to mid otherwise.
+Hints:
 Version 0: sequential search.
 Version 1: binary search.
 Version 2: find an interval containing T of size ≤2T, then do binary search.

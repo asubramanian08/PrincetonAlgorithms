@@ -1,31 +1,23 @@
 1. 
 Q:  Queue with two stacks. Implement a queue with two stacks so that each queue operations takes a constant 
 amortized number of stack operations.
-
 A:  Have one stack from dequeuing and one for enqueueing. To enqueue you push to your enqueue stack. To dequeue 
 you pop from the dequeue stack. If the dequeue stack is empty drain the entire ensue stack and push it to the 
 dequeue stack (such that everything in the enqueue stack is reversed when I gets to the dequeue stack).
-
 Hint:   To start, you need to understand that Java arrays are covariant but Java generics are not: that is, 
 String[] is a subtype of Object[], but Stack<String> is not a subtype of Stack<Object>.
-
 
 2.
 Q:  Stack with max. Create a data structure that efficiently supports the stack operations (push and pop) and 
 also a return-the-maximum operation. Assume the elements are real numbers so that you can compare them.
-
 A:  Have a linked list linking all elements in the stack by greatest order (separate from the main stack). When 
 you add an element find where is goes in the max linked list and add it. When you remove an element connect the 
 element below it with the one about it. The greatest element is the greatest thing element in the linked list.
-
 Hint:    Use two stacks, one to store all of the items and a second stack to store the maximums.
-
 
 3.
 Q:  Java generics. Explain why Java prohibits generic array creation.
-
 A:  Because they could then be casted to object arrays which could then be casted to anything else and the 
 integrity of the array is compromised.
-
 Hint:   If you push elements onto a stack and then pop them all, they appear in reverse order. If you repeat this 
 process, they're now back in order.

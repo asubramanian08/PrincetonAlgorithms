@@ -3,21 +3,15 @@ Q:  Shortest directed cycle. Given a digraph G, design an efficient algorithm to
 the minimum number of edges (or report that the graph is acyclic). The running time of your algorithm should 
 be at most proportional to V(E+V) and use space proportional to E+V, where V is the number of vertices and E 
 is the number of edges.
-
 A:  Run a DFS on the Graph. Once a node is hit that has already visited, the minimum cycle is the min of the 
 preexisting min and the distance from the last time this node was visited.
-
 Hint:   run BFS from each vertex.
-
 
 2.
 Q:  Hamiltonian path in a DAG. Given a directed acyclic graph, design a linear-time algorithm to determine 
 whether it has a Hamiltonian path (a simple path that visits every vertex), and if so, find one
-
 A:  ?
-
 Hint:   topological sort.
-
 
 3.
 Q:  Reachable vertex.
@@ -25,8 +19,6 @@ Q:  Reachable vertex.
 other vertex, and if so, find one.
  - Digraph: Design a linear-time algorithm to determine whether a digraph has a vertex that is reachable from 
 every other vertex, and if so, find one.
-
 A:  ?
-
 Hint:   Compute the out-degree of each vertex, compute the strong components and look at the kernel DAG (the 
 digraph that results when you contract each strong component to a single vertex).

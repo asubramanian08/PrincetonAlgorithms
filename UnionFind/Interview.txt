@@ -4,14 +4,11 @@ timestamps at which times pairs of members formed friendships, design an algorit
 at which all members are connected (i.e., every member is a friend of a friend of a friend ... of a friend). 
 Assume that the log file is sorted by timestamp and that friendship is an equivalence relation. The running time 
 of your algorithm should be m*log(n) or better and use extra space proportional to n.
-
 A.  Run through the log files and use a union operation to combine 2 new friends. Keep a counter of the number of 
 friend groups (all friends connected). Initialize it as the number of members. Decrease it when a union operation 
 of two separate groups is called. When the number of group is one, the earliest time that all friends are 
 connected is the time of the last connection.
-
-Hint: union-find
-
+Hint:   union-find
 
 2.
 Q.  Union-find with specific canonical element. Add a method find() to the union-find data type so that find(i) 
@@ -19,16 +16,13 @@ returns the largest element in the connected component containing i. The operati
 find() should all take logarithmic time or better.
 For example, if one of the connected components is {1,2,6,9}, then the find() method should return 9 for each of 
 the four elements in the connected components.
-
 A.  My algorithm will run in the same time as a quick union with path compression. It will have a similar 
 structure to a weighted quick union with path compression. Instead of connecting the smaller tree to the larger 
 tree in a union, my algorithm will connect the tree with the smaller root value to the one with the larger root 
 value. It will also use a path compression to lower the complexity. The find() method will just go to the root of 
 a tree, as that will be the largest element in the tree.
-
-Hint: maintain an extra array to the weighted quick-union data structure that stores for each root i the large 
+Hint:   maintain an extra array to the weighted quick-union data structure that stores for each root i the large 
 element in the connected component containing i.
-
 
 3.
 Q.  Successor with delete. Given a set of n integers S={0,1,...,n−1} and a sequence of requests of the following 
@@ -37,11 +31,9 @@ form:
  - Find the successor of x: the smallest y in S such that y≥x.
 design a data type so that all operations (except construction) take logarithmic time or better in the worst 
 case.
-
 A. Form a tree where each node has at most 2 children. To remove a node (x) if the current node you are on is 
 greater than the one to remove, go the the left node. otherwise move the the right node. Repeat until the node 
 you are on is one you want to find. Then remove the node. Replace the vacant node with the child that contains 
 less nodes under it. Repeat until the last There are no more nodes to replace with. The node that is just greater 
 than x is node to the right of x. Inserting will be order N log(n) because you will call an insert for each n.
-
-Hint: use the modification of the union−find data discussed in the previous question.
+Hint:   use the modification of the union−find data discussed in the previous question.
