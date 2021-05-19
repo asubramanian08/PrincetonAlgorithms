@@ -1,0 +1,14 @@
+Cut -> some of the capacity(weight) of the edge from set A to B
+Min cut - find the min cut that will completely partition A from B (with min cost)
+Flow -> less than the capacity and greater than 0, the in flow of a vertex = outflow of a vertex
+Maximize the flow going out from the source or in to the target (same thing)
+NOTE: the problems are pretty much the same
+Ford-Fulkerson -> keep finding path and add the bottleneck remaining flow to the each edge
+many flow-cut relationships pg 26-36 -> ** page 32-34 **
+Min cut = from max flow but searching the parts that aren't full and backwards paths that aren't empty
+run time pg 49 -> break down each path ordering method
+Data structures: 
+    Flow edge (capacity, flow, from, to)
+    Flow network -> just like a graph (adj) | uses flow edge
+    Actual Ford-Fulkerson algorithm pg 60 (implementation does BFS)
+Many applications pg 64 -> later pages (till end) also contain it
