@@ -1,0 +1,25 @@
+NOTE: This can get language specific
+Strings in java are immutable -> methods pg 8-9
+String Builder vs. String -> data types in question
+    reverse string
+    array of suffix(will revisit)
+    Longest common prefix (util get to a point thats not equal)
+Radix -> number of character values a string can hold
+Key index counting (bucket sort) -> O(N)        KIC
+    The key is a small integer -> use as array index.
+    Other data stored with the keys -> then distribute keys
+    Basis of other string sorting algorithms
+LSD radix sort (Least significate digit first)
+    -> sort the string buy KIC for each element in the string (last first)
+MSD radix sort
+    sort the sub array
+    works for difference in sizes
+    caching problems
+3-way radix quick-sort
+    Combines benefits of quicksort and MSD
+    3 way partitioning just for quicksort -> very similar to 3 way quicksort
+Operation table (of the above) pg 53
+Suffix array: (down from here)
+key word in context search -> Suffix sort (repeats come together), then binary search
+longest repeated substring -> brings long repeated substrings together
+Algorithm solution: Manber-Myers (to the suffix array) linearithmic *pg 69* -> uses index sort
