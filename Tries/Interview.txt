@@ -1,0 +1,26 @@
+1.
+Q:  Prefix free codes. In data compression, a set of binary strings is if no string is a prefix of another. 
+For example, {01,10,0010,1111} is prefix free, but {01,10,0010,10100} is not because 10 is a prefix of 10100.
+Design an efficient algorithm to determine if a set of binary strings is prefix-free. The running time of 
+your algorithm should be proportional the number of bits in all of the binary stings.
+A:  Construct a trie and if some string of the try ends and doesn't branch out from another string, then it 
+contains prefix.
+Hint:    insert the binary strings into a 2-way trie, it's also possible to solve this problem using radix 
+sorting or a ternary search trie.
+
+2.
+Q:  Boggle. Boggle is a word game played on an 4-by-4 grid of tiles, where each tile contains one letter in 
+the alphabet. The goal is to find all words in the dictionary that can be made by following a path of 
+adjacent tiles (with no tile repeated), where two tiles are adjacent if they are horizontal, vertical, or 
+diagonal neighbors.
+A:  Search through the grid and after have a dictionary trie at hand search through that trie and see if you 
+land on a word (then add one). 
+Hint:   create a trie containing all of the words in the dictionary.
+
+3.
+Q:  Suffix trees. Learn about and implement, the ultimate string searching data structure.
+A:  NOTE: I didn't implement a suffix tree but I learned about it. Here is my description of a suffix tree:
+Each node in the tree is a substring of the original string and has at least 2 children which are a break up 
+of the current string. The ends are numbered 1-n and contain all the different suffix of the original string. 
+(Didn't understand it too well.)
+Hint:   very difficult material ahead.

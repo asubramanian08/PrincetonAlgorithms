@@ -1,0 +1,20 @@
+Trie: Searching with string keys (said instead of tree) -> R-way
+    Each key is given a value / key
+    Break the words down by sequence letter
+    Search hit self explanatory
+    Search miss can be a null link or doesn't match the end destination
+    Create new links when adding something (again obvious)
+    Also easy to delete -> just set value to null
+Ternary Search Trie -> fix memory problem (TST)
+    Every node has 3 children -> smaller, equal, larger
+    Search algo is simple
+    Just follow the tree for the insert.
+    MUCH LESS NULL LINKS
+Other operations -> can so spell correcting
+    Match a prefix | auto complete
+    wild card -> any letter Goes
+    Longest prefix -> longest key that is prefix of given string | Id address
+    Sorted iteration
+    T9 texting -> guess word
+Patricia Trie -> sequence of chars per node | good for binary tries
+Suffix tree
