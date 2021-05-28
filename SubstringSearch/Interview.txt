@@ -1,0 +1,28 @@
+1.
+Q:  Cyclic rotation of a string. A string s is a cyclic rotation of a string t if s and t have the same 
+length and s consists of a suffix of t followed by a prefix of t. For example, "winterbreak" is a cyclic 
+rotation of "breakwinter" (and vice versa). Design a linear-time algorithm to determine whether one string 
+is a cyclic rotation of another.
+A:  Use Knuth-Morris-Pratt.
+Hint:   
+
+2.
+Q:  Tandem repeat. A tandem repeat of a base string b within a string s is a substring of s consisting of at 
+least one consecutive copy of the base string b. Given b and s, design an algorithm to find a tandem repeat 
+of b within s of maximum length. Your algorithm should run in time proportional to M+N, where M is length of 
+b and N is the length s.
+For example, if s is "abcabcababcaba" and b is "abcab", then "abcababcab" is the tandem substring of maximum 
+length (2 copies).
+A:  Just simply do a substring search for a 2b string.
+Hint:   use Knuth-Morris-Pratt.
+
+3.
+Q:  Longest palindromic substring. Given a string s, find the longest substring that is a palindrome in 
+expected linearithmic time.
+Signing bonus: Do it in linear time in the worst case.
+A:  "Binary search" though the longest length. You can check if something is a palindrome of length x in 
+liner time. Do a sort of binary search on that x value which will take a total of log * liner or 
+linearithmic time.
+Hint:   use given a parameter L, find all palindromic substrings of length exactly L in linear time using a 
+Karp-Rabin strategy. Signing bonus: To do it in linear time in the worst case, use Manacher's algorithm or 
+suffix trees.

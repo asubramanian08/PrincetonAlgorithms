@@ -1,0 +1,17 @@
+Substring searching -> looks for a "patter" in a long input stream
+Applications: search and replace, stock price from yahoo ...
+Brute force -> search through the text (increment i ptr) and j when two vals are equal
+    pg 13, M*N worst case, You have to back up from the steam
+Brute force 2.0 (no back up)
+Knuth-Morris-Pratt
+    Move along -> if wrong char find out next right char (from the pattern possibly)
+    There is no back up -> precompute what pos to go to -> liner
+    uses DFA -> deterministic finite state -> where to go given a character pg 27-32 ** pg 35 impl
+    Might be too much memory in things like unicode
+Boyer-Moore -> goes backward pg 46 -> can do skips best: O(N/M), worst: O(NM) or liner if use KMP combination
+Rabin-Karp -> mod the constructed number of a large prime 
+    keep looping until get the right number
+    Compute hash pg 51-52
+    Simple change from one set of numbers the the next ("just do some math")
+    Adaptable to different problems -> 2D search ...
+Summary chart pg 58
