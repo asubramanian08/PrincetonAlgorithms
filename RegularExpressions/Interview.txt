@@ -1,0 +1,35 @@
+1.
+Q:  Challenging REs. Construct a regular expression for each of the following languages over the binary alphabet 
+or prove that no such regular expression is possible:
+- All strings except 11 or 111.
+- Strings with 1 in every odd-number bit position.
+- Strings with an equal number of 0s and 1s.
+- Strings with at least two 0s and at most one 1.
+- Strings that when interpreted as a binary integer are a multiple of 3.
+- Strings with no two consecutive 1s.
+- Strings that are palindromes (same forwards and backwards).
+- Strings with an equal number of substrings of the form 01 and 10.
+A:  
+- (A-Za-z02-9)*|1|1111.*
+- (1.)*
+- Can't count the number of something
+- Can't ?
+- ((A-Za-z02-9)*+1)*
+- Can't go backwards
+- Can't count
+Hint:   two are not possible (equal number of 0s and 1s; palindromes).
+
+2.
+Q:  Exponential-size DFA. Design a regular expressions of length n such that any DFA that recognizes the same 
+language has an exponential number of states
+A:  A series of n '.'s.
+Hint:   nth-to-the-last bit equals 0.
+
+3.
+Q:  Extensions to NFA. Add to [NFA.java](http://algs4.cs.princeton.edu/54regexp/NFA.java.html) the ability to 
+handle multi-way or, wildcard, and the + closure operator.
+A:  For the wildcard, it is already implemented, when checking if something is the right letter if the char is 
+the '.' then it matches. For the + operator, just do the same thing as the * except remove the link going out of 
+the character without reading the character.
+Hint:   think about how you need to modify the digraph for multi-way or and the + closure operator. What other 
+changes to the algorithm do you need to make?

@@ -1,0 +1,14 @@
+Regular Expression: a formula like thing that is a set of strings -> find in a text stream
+Application list pg 6
+Operator lists on pg 7-8
+DFA: Deterministic Finite Automaton -> string is in set
+Kleene theorem: a RE can be represented as a DFA and vice-versa
+Use NFA: Non-Deterministic Finite Automaton
+    Can make some moves with text
+    Convert RE to NFA -> use the characters written and parenthesis
+    -> construction (connecting chars in digraph) defined for each operation
+       differently. pg 37-42 code on pg 45
+    Store a set of all states you could be at
+    DFS from set of vertices -> reachable
+    Finding is text have to proper RE code pg. 32 - 33
+Didn't write about the applications
