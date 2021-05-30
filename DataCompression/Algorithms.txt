@@ -1,0 +1,25 @@
+Reduce Space of File -> saves space and time transmitting
+Application of Data Compressions pg 4, 
+Lossless: Bring back that same data you put in
+Compress ration: Compressed / Original (normal language: 50-75%)
+When the bits are the same (0/1) for some time, write run length
+Huffman Encoding
+    to avoid Ambiguity: no word prefix of another
+     -> same length, stop char, *generate without prefix*
+     -> can be represented with tries
+    Expand: just read bit and follow the trie down left or right
+    Write the trie: go down trie and if leaf write true then the char, else write false
+    Read trie: read the true or false if leaf read char not children, else read children
+    Shannon-Fano: divide the symbols into half and mark one as 0 and next as 1
+    Huffman: merge the smallest 2 sub-tries then add that to the list of sub tries (until one trie)
+        the original sub-tries are the list of chars and the count is their frequencies pg. 34
+        Use a priority queue to find the minimum counts of the sub-tries
+LZM
+    Types of one look models
+        Static model: same compression for all texts
+        Dynamic model: have a first pass through the text (Huffman coding)
+        Adaptive Model: learn about the text as reading (LZM)
+    Don't add the table because assume that the interpreter will.
+    Have a trie containing all the words that are looked at and might be seen
+    Code on page 41
+    Expansion: do what the compress would have done, one step behind -> array to represent table
