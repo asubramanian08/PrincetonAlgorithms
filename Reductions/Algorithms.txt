@@ -1,0 +1,11 @@
+More big picture programing models
+Classify problem baced on the order of the algorithm
+Reduction is a tool to break down a problem, Ex:
+    to find median, sort then return middle
+    find if elements are the same, sort then have a pass though array
+    Example page -> pg 11
+    Also detailed examples on pg 12 - 17
+Reduction helps establish lower bounds -> the lower bound spreads
+    * sorting can be done using a convex hull so convex hull lower bound is n*log(n) *
+If x linear time reduces to Y and criss-cross then they have the same complexity
+Hard to classify but can put in categories
