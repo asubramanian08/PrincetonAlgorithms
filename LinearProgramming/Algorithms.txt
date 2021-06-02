@@ -1,0 +1,19 @@
+Allocate scares resources to multiple activities
+    Air planes use linear programming to schedule flights
+Applications page -> pg 3
+Brewer Problem -> Example problem, models real life situation
+    given an amount of corn hops and malt
+    given the recipe and prices to make beer and ale
+    how much ale and beer should be made to maximize profits
+Draw lines for the inequalities on a graph and find the feasible region -> always convex
+Answer has to be an extreme points -> if one point it better than all its neighbors, it is the best
+Simplex Algorithm -> keep going to adjacent points that are not worse until stuck ** HARD
+    Basis: variables being solved for
+    Do a pivot: solve for a variable and take some other vars out of the basis
+    Use the minimum ratio rule to choose the row
+    Stop pivoting once the optimal answer (negative coefficients) is reached
+    Bland rule: find the first index that is positive, otherwise it equation is optimal
+    Stalling: If multiple lines intersect at the same point it could be looking at the same point
+    Cycling: If you removing variable causes infinite cycle (prevented with Bland rule)
+There are many linear programming libraries ...
+THIS IS A REALLY USEFUL AND GENERIC PROGRAM THAT CAN BE USED FOR A LOT OF THINGS

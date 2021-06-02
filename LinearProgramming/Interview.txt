@@ -1,0 +1,26 @@
+1.
+Q:  Feasibility detection. Suppose that you want to solve a linear program but you don't have a starting initial 
+basic feasible solution—perhaps the all 0 vector is not feasible. Design a related linear program whose solution 
+will be a basic feasible solution to the original linear program (assuming the original linear program has a 
+basic feasible solution).
+A:  Make a new linear program that predetermines a variable?
+Hint:   add new artificial variables to each row and let the artificial variables be the initial basis. Select 
+the objective function to drive the artificial variables out of the basis. This is known as Phase I of the 
+simplex algorithm.
+
+2.
+Q:  Detecting unboundedness. Describe how to modify the simplex algorithm to detect an unbounded linear program—a 
+linear program in which there is a feasible solution that makes the objective function arbitrarily large.
+A:  Just check that every variable used is on the left side of an equation and that the number of constraints is 
+greater than or equal to the number of variables.
+Hint:   identify a vector d≠0 such that if x is a feasible solution, then so is x+αd for any α>0. To identify such 
+a vector d, consider what happens when the simplex algorithm has an entering column but no leaving row (because 
+all entries in that column are nonpositive).
+
+3.
+Q:  Birkhoff-von Neumann theorem. Consider the polyhedron P defined by ∑ixij=1, ∑jxij=1, and xij≥0. Prove that all 
+extreme points of P have integer coordinates (0 or 1).
+A:  ?
+Hint:   let x∈P be a vector that has some fractional entries. Prove that x is not an extreme point by expressing 
+it as the convex combination of two vectors x+ϵy and x−ϵy. To identify y, find a cycle in the bipartite graph that 
+has a vertex for each i and j and an edge (i,j) if and only if 0<xij<1.
