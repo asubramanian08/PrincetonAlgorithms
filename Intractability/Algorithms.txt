@@ -1,0 +1,24 @@
+Building different machines doesn't mean we can compute more
+There were multiple different way mathematicians were trying to compute things pg 7
+    -> what about the running time?
+Exponential time algorithm cannot really be used in practice
+Intractable: A problem that cannot be solved in some polynomial time (not exponential)
+Search Problems: (give answer or answer doesn't exist)
+    LSOLVE: Satisfy a series of equations and variables
+    LP: Same as LSOLVE except they are inequalities (linear programming)
+    ILP: Same as LP but the answers are either 1 or 0
+    SAT: Same as LSOLVE but they are boolean equations and answers
+    Factor: (not as related) find the factors of a number
+Decision problems (yes / no), optimization problem (smallest answer)
+2 major classes of problems:
+    NP: the class of search problems (or yes / no problems) | table pg 24
+    P: The problems that are solvable in polynomial time | table pg 25
+Nondeterministic machine: guess/find the solution (not real but can code model)
+Turing machine is known what the next point is (deterministic)
+Use reduction to classify problems -> there are many problems that are reduced to SAT pg 39
+NP complete: if every problem in NP reduces to a problem it is NP complete
+    SAT is NP complete
+    Map of reductions on page 46
+    NP complete means it can reduce to all NP-hard problems
+Recap of the NP and P ideas on pg 49
+Special case of a problem of an NP problem could be polynomial time

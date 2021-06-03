@@ -1,0 +1,31 @@
+1.
+Q:  Graph 3-colorability. An undirected graph is 3-colorable if the vertices can be colored red, green, or blue 
+in such a way that no edge connects two vertices with the same color. Prove that 3COLOR is NP-complete.
+A:  A 3 color can be converted into a SAT so it is NP-complete. To reduce a 3 color to a SAT just say that each 
+node has 2 variables to represent 3 values of color. Say for every connection that the 2 color values are not 
+equal (x1 and not y1) and (x2 and not y2).
+Hint:   give a polynomial-time reduction from 3SAT to 3COLOR by creating three vertices for each clause.
+
+2.
+Q:  Decision problems. Traditionally, the complexity classes P and NP are defined in terms of decision problems 
+(where the answer is either yes or no) instead of search problems (where the answer is the solution itself). 
+Prove that the search problem version of SAT (find a binary solution to a given system of boolean equations?) 
+polynomial-time reduces to the decision version of SAT (does there exists a binary solution to a given system of 
+boolean equations?).
+A:  If there is a solution to the decision problem then the search problem could check that solution in 
+polynomial time.
+Hint:   to determine whether to set x1 to true, set it to true; simplify the resulting system of boolean 
+equations; and check whether there exists a solution to the simplified system.
+
+3.
+Q:  Optimization problems. Given an undirected graph with positive edge weights, the traveling salesperson 
+problem is to find a simple cycle that visits every vertex and has minimum total weight. The search problem 
+version of the problem is, given a parameter L, find a tour of length at most L. Prove that the optimization 
+version of the problem polynomial-time reduces to the search version of the problem.
+Remark: for many problems such as this one, the optimization version of the problem (which is not known to be in 
+NP) is solvable in polynomial time if and only if the search version of the problem (which is easily seen to be 
+in NP) is.
+A:  There is a way to solve the optimized problem with the search problem. The answer to the search problem is 
+going the be the answer to the optimization problem unless the answer is less than L. Other wise the answer is 
+some error or not possible.
+Hint:   use binary search.
