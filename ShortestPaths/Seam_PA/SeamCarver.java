@@ -10,7 +10,7 @@ public class SeamCarver {
     // create a seam carver object based on the given picture
     public SeamCarver(Picture picture) {
         if (picture == null)
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Can't initialized SeamCarver with not picture");
         pic = new Picture(picture);
     }
 
@@ -32,7 +32,7 @@ public class SeamCarver {
     // energy of pixel at column x and row y
     public double energy(int x, int y) {
         if (!inRange(x, width()) || !inRange(y, height()))
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Pixel must be in range of the picture");
         if ((x == 0 || x == width() - 1) || (y == 0 || y == height() - 1))
             return 1000;
         double xGradient = squareGradient(pic.get(x + 1, y), pic.get(x - 1, y));
@@ -50,32 +50,31 @@ public class SeamCarver {
     // sequence of indices for horizontal seam
     public int[] findHorizontalSeam() {
         // form the energy grid
-        double[][] grid = getGrid();
-        double add;
+        double[][] grid = getEnergyGrid();
         for (int i = width() - 1; i > 0; i--)
             for (int j = 0; j < height(); j++) {
-                add = grid[i][j];
+                double minEnergy = grid[i][j];
                 if (j != 0)
-                    add = Math.min(add, grid[i][j - 1]);
+                    minEnergy = Math.min(minEnergy, grid[i][j - 1]);
                 if (j != height() - 1)
-                    add = Math.min(add, grid[i][j + 1]);
-                grid[i - 1][j] += add;
+                    minEnergy = Math.min(minEnergy, grid[i][j + 1]);
+                grid[i - 1][j] += minEnergy;
             }
 
         // find the path
         int[] path = new int[width()];
-        int pos = 0, newPos;
+        int minEnergyIndex = 0;
         for (int i = 1; i < height(); i++)
-            if (grid[0][pos] > grid[0][i])
-                pos = i;
+            if (grid[0][minEnergyIndex] > grid[0][i])
+                minEnergyIndex = i;
         for (int i = 0; i < width(); i++) {
-            newPos = pos;
-            if (pos != 0 && grid[i][pos - 1] < grid[i][newPos])
-                newPos = pos - 1;
-            if (pos != height() - 1 && grid[i][pos + 1] < grid[i][newPos])
-                newPos = pos + 1;
-            pos = newPos;
-            path[i] = pos;
+            int nextMinEnergy = minEnergyIndex;
+            if (minEnergyIndex != 0 && grid[i][minEnergyIndex - 1] < grid[i][nextMinEnergy])
+                nextMinEnergy = minEnergyIndex - 1;
+            if (minEnergyIndex != height() - 1 && grid[i][minEnergyIndex + 1] < grid[i][nextMinEnergy])
+                nextMinEnergy = minEnergyIndex + 1;
+            minEnergyIndex = nextMinEnergy;
+            path[i] = minEnergyIndex;
         }
         return path;
     }
@@ -83,37 +82,36 @@ public class SeamCarver {
     // sequence of indices for vertical seam
     public int[] findVerticalSeam() {
         // form the energy grid
-        double[][] grid = getGrid();
-        double add;
+        double[][] grid = getEnergyGrid();
         for (int j = height() - 1; j > 0; j--)
             for (int i = 0; i < width(); i++) {
-                add = grid[i][j];
+                double minEnergy = grid[i][j];
                 if (i != 0)
-                    add = Math.min(add, grid[i - 1][j]);
+                    minEnergy = Math.min(minEnergy, grid[i - 1][j]);
                 if (i != width() - 1)
-                    add = Math.min(add, grid[i + 1][j]);
-                grid[i][j - 1] += add;
+                    minEnergy = Math.min(minEnergy, grid[i + 1][j]);
+                grid[i][j - 1] += minEnergy;
             }
 
         // find the path
         int[] path = new int[height()];
-        int pos = 0, newPos;
+        int minEnergyIndex = 0;
         for (int i = 1; i < width(); i++)
-            if (grid[pos][0] > grid[i][0])
-                pos = i;
+            if (grid[minEnergyIndex][0] > grid[i][0])
+                minEnergyIndex = i;
         for (int i = 0; i < height(); i++) {
-            newPos = pos;
-            if (pos != 0 && grid[pos - 1][i] < grid[newPos][i])
-                newPos = pos - 1;
-            if (pos != width() - 1 && grid[pos + 1][i] < grid[newPos][i])
-                newPos = pos + 1;
-            pos = newPos;
-            path[i] = pos;
+            int nextMinEnergy = minEnergyIndex;
+            if (minEnergyIndex != 0 && grid[minEnergyIndex - 1][i] < grid[nextMinEnergy][i])
+                nextMinEnergy = minEnergyIndex - 1;
+            if (minEnergyIndex != width() - 1 && grid[minEnergyIndex + 1][i] < grid[nextMinEnergy][i])
+                nextMinEnergy = minEnergyIndex + 1;
+            minEnergyIndex = nextMinEnergy;
+            path[i] = minEnergyIndex;
         }
         return path;
     }
 
-    private double[][] getGrid() {
+    private double[][] getEnergyGrid() {
         double[][] grid = new double[width()][height()];
         for (int i = 0; i < width(); i++)
             for (int j = 0; j < height(); j++)
@@ -144,12 +142,22 @@ public class SeamCarver {
     }
 
     private void checkSeam(int[] seam, int dimension) {
-        if (seam == null || seam.length != (dimension == width() ? height() : width()) || dimension <= 1
-                || !inRange(seam[0], dimension))
-            throw new IllegalArgumentException();
+        if (seam == null)
+            throw new IllegalArgumentException("No seam was passed (null)");
+        if (seam.length != (dimension == width() ? height() : width()))
+            throw new IllegalArgumentException("Seam length doesn't match according dimension");
+        if (dimension <= 1)
+            throw new IllegalArgumentException("Can't remove any additional seams");
+        if (!inRange(seam[0], dimension))
+            throw new IllegalArgumentException(String.format("Pixel at seam position %d out of range: %d", 0, seam[0]));
         for (int i = 1; i < seam.length; i++)
-            if (!inRange(seam[i], dimension) || Math.abs(seam[i] - seam[i - 1]) > 1)
-                throw new IllegalArgumentException();
+            if (!inRange(seam[i], dimension))
+                throw new IllegalArgumentException(
+                        String.format("Pixel at seam position %d out of range: %d", i, seam[i]));
+            else if (Math.abs(seam[i] - seam[i - 1]) > 1)
+                throw new IllegalArgumentException(
+                        String.format("Pixel at seam position %d differs by more than one: %d", i, seam[i]));
+
     }
 
     private boolean inRange(int x, int max) {
